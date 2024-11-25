@@ -119,3 +119,7 @@ body.div {
 .button-out {
   height: 50px;
 }
+
+.rootnode {
+  width: 100%;
+}
