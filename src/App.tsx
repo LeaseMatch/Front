@@ -15,7 +15,7 @@ const App: React.FC = () =>
     <Router>
       <Navigation />
       <div style={{ paddingTop: '3.5rem' }}>
-        <h1>{user?.signInDetails?.loginId}'s todos</h1>
+        <h1>Authenticated User: {user?.signInDetails?.loginId} </h1>
         {/* Ensures content does not overlap the navbar */}
         <Routes>
           <Route path="/properties/registration" element={<PropertiesRegistration />} />
