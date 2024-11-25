@@ -9,7 +9,9 @@ import { Authenticator } from "@aws-amplify/ui-react";
 
 Amplify.configure(outputs);
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const rootElement = document.getElementById("root");
+rootElement?.classList.add("rootnode");
+ReactDOM.createRoot(rootElement!).render(
   <React.StrictMode>
     <Authenticator>
       <App />

@@ -14,7 +14,7 @@ const App: React.FC = () =>
     <Router>
       <div className='frame'>
         <div className='frame-header'>
-          <h1>User: {user?.signInDetails?.loginId} </h1><button onClick={signOut}>Sign out</button>
+          <h1>User: {user?.signInDetails?.loginId} </h1><button className='button-out' onClick={signOut}>Sign out</button>
         </div>
         <div className='contenedor'>
           <Navigation />

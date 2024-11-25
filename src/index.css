@@ -113,9 +113,9 @@ body.div {
 .frame-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.frame-header.button {
+.button-out {
   height: 50px;
 }
