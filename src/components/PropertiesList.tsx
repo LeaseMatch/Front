@@ -51,7 +51,7 @@ const PropertiesList: React.FC = () =>
     };
 
     return (
-        <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
+        <div className="page">
             <h1>Property Search</h1>
             <div style={{ marginBottom: "20px", display: "flex", gap: "10px" }}>
                 <input

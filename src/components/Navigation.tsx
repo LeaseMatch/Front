@@ -34,7 +34,7 @@ const Navigation: React.FC = () =>
     };
 
     return (
-        <nav style={{ padding: '1rem', background: '#f4f4f4', borderBottom: '1px solid #ccc' }}>
+        <nav className='menu'>
             <ul style={{ listStyleType: 'none', margin: 0, padding: 0 }}>
                 {menuOptions.map((menu) => (
                     <li key={menu.label} style={{ marginBottom: '0.5rem' }}>

@@ -2,7 +2,7 @@
 const PropertiesRegistration = () =>
 {
     return (
-        <div><h1>Properties Registration</h1></div>
+        <div className="page"> <h1>Properties Registration</h1></div >
     )
 }
 
