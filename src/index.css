@@ -107,7 +107,6 @@ body.div {
 }
 
 .frame {
-  padding: 20px;
   margin-top: 50px;
 }
 
@@ -115,4 +114,8 @@ body.div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.frame-header.button {
+  height: 50px;
 }
