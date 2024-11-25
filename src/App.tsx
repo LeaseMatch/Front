@@ -12,15 +12,18 @@ const App: React.FC = () =>
   const { user, signOut } = useAuthenticator();
   return (
     <Router>
-      <div className='contenedormenu'>
+      <div className='frame'>
         <h1>Authenticated User: {user?.signInDetails?.loginId} </h1>
-        <Navigation />
-        <Routes>
-          <Route path="/properties/registration" element={<PropertiesRegistration />} />
-          <Route path="/properties/search" element={<PropertiesList />} />
-          <Route path="/customers/registration" element={<CustomersRegistration />} />
-        </Routes>
-        <button onClick={signOut}>Sign out</button>
+        <div className='contenedor'>
+
+          <Navigation />
+          <Routes>
+            <Route path="/properties/registration" element={<PropertiesRegistration />} />
+            <Route path="/properties/search" element={<PropertiesList />} />
+            <Route path="/customers/registration" element={<CustomersRegistration />} />
+          </Routes>
+          <button onClick={signOut}>Sign out</button>
+        </div>
       </div>
     </Router >
   );
