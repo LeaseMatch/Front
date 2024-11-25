@@ -106,3 +106,12 @@ body.div {
   font-family: "Arial, sans-serif";
   width: 100%;
 }
+
+.frame {
+  padding: 20px;
+}
+
+.frame-header {
+  display: flex;
+  flex-direction: row;
+}
