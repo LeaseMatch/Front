@@ -13,8 +13,8 @@ const App: React.FC = () =>
   return (
     <Router>
       <div className='frame'>
-        <div className='header'>
-          <h1>Authenticated User: {user?.signInDetails?.loginId} </h1><button onClick={signOut}>Sign out</button>
+        <div className='frame-header'>
+          <h1>User: {user?.signInDetails?.loginId} </h1><button onClick={signOut}>Sign out</button>
         </div>
         <div className='contenedor'>
           <Navigation />
