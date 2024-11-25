@@ -3,8 +3,7 @@ body {
   background: linear-gradient(180deg, rgb(117, 81, 194), rgb(255, 255, 255));
   display: flex;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -27,9 +26,11 @@ button {
   transition: border-color 0.25s;
   color: white;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -62,4 +63,63 @@ li:hover {
 a {
   font-weight: 800;
   text-decoration: none;
+}
+
+.contenedor {
+  padding-top: '3.5rem';
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  padding: 20px;
+  width: 100%;
+}
+
+.contenedor.div {
+  width: 100%;
+}
+
+.menu {
+  padding: 1rem;
+  background: #f4f4f4;
+  border-right: 1px solid #ccc;
+  width: 400px;
+  height: 100%;
+}
+
+.menu.ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: 'none';
+  margin: 0M;
+  padding: 1rem;
+  width: 300px;
+  background-color: '#eaeaea';
+}
+
+body.div {
+  width: 100%;
+}
+
+.page {
+  padding: 20px;
+  font-family: "Arial, sans-serif";
+  width: 100%;
+}
+
+.frame {
+  margin-top: 50px;
+}
+
+.frame-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.button-out {
+  height: 50px;
+}
+
+.rootnode {
+  width: 100%;
 }

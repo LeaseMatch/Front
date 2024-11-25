@@ -32,7 +32,7 @@ const PropertiesList: React.FC = () =>
         try
         {
             const response = await axios.get(
-                `https://yduv27basj.execute-api.us-east-1.amazonaws.com/prod/properties`,
+                `https://627wl6kny6.execute-api.us-east-1.amazonaws.com/prod/properties`,
                 {
                     params: {
                         city: cityQuery,
@@ -51,7 +51,7 @@ const PropertiesList: React.FC = () =>
     };
 
     return (
-        <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
+        <div className="page">
             <h1>Property Search</h1>
             <div style={{ marginBottom: "20px", display: "flex", gap: "10px" }}>
                 <input
