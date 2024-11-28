@@ -17,9 +17,9 @@ const menuOptions: MenuItem[] = [
         ],
     },
     {
-        label: 'Customers',
+        label: 'clients',
         subItems: [
-            { label: 'Registration', path: '/customers/registration' },
+            { label: 'Registration', path: '/clients/registration' },
         ],
     },
 ];
@@ -56,7 +56,7 @@ const Navigation: React.FC = () =>
                                     <li key={subItem.label} style={{ marginTop: '0.3rem' }}>
                                         <Link
                                             to={subItem.path || '#'}
-                                            style={{ textDecoration: 'none', color: '#007bff' }}
+                                            style={{ textDecoration: 'none' }}
                                         >
                                             {subItem.label}
                                         </Link>

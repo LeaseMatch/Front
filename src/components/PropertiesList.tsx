@@ -51,7 +51,7 @@ const PropertiesList: React.FC = () =>
     };
 
     return (
-        <div className="page">
+        <div className="marco-cliente">
             <h1>Property Search</h1>
             <div style={{ marginBottom: "20px", display: "flex", gap: "10px" }}>
                 <input
@@ -84,7 +84,6 @@ const PropertiesList: React.FC = () =>
                         padding: "10px 20px",
                         borderRadius: "5px",
                         border: "none",
-                        backgroundColor: "#007BFF",
                         color: "#fff",
                         cursor: "pointer",
                     }}

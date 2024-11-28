@@ -46,7 +46,8 @@ ul {
   margin: 8px 0;
   border: 1px solid black;
   gap: 1px;
-  background-color: black;
+  /* background-color: black; */
+  background-color: rgb(117, 81, 194);
   border-radius: 8px;
   overflow: auto;
 }
@@ -72,6 +73,8 @@ a {
   height: 100vh;
   padding: 20px;
   width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .contenedor.div {
@@ -106,9 +109,9 @@ body.div {
   width: 100%;
 }
 
-.frame {
-  margin-top: 50px;
-}
+/* .frame {
+   margin-top: 50px; 
+} */
 
 .frame-header {
   display: flex;
@@ -122,4 +125,82 @@ body.div {
 
 .rootnode {
   width: 100%;
+}
+
+.marco-cliente {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form input {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form>div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: end;
+}
+
+.form button {
+  margin: 5px;
+  margin-left: 30px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form label {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form input {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  height: 40px;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  padding: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.marco-pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+  height: 100%;
+}
+
+.header-user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.marco-cliente {
+  height: 100%;
+  margin-top: 50px;
 }

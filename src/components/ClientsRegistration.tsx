@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 interface ClientFormProps { }
 
-const CustomersRegistration: React.FC<ClientFormProps> = () =>
+const ClientsRegistration: React.FC<ClientFormProps> = () =>
 {
     const [formData, setFormData] = useState({
         id: "",
@@ -68,10 +68,10 @@ const CustomersRegistration: React.FC<ClientFormProps> = () =>
     };
 
     return (
-        <div>
+        <div className="marco-cliente">
             <h2>Create Client</h2>
             {status && <p>{status}</p>}
-            <form onSubmit={handleSubmit}>
+            <form className="form" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="id">ID:</label>
                     <input
@@ -155,5 +155,5 @@ const CustomersRegistration: React.FC<ClientFormProps> = () =>
     );
 };
 
-export default CustomersRegistration;
+export default ClientsRegistration;
 
