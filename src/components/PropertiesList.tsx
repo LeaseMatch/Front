@@ -1,151 +1,127 @@
-import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Property } from '../types/property.types';
+import PropertyCard from './PropiertieCard';
+import PropertyModal from './PropertyModal';
 
-interface Property
-{
-    id: string;
-    country: string;
-    city: string;
-    property_type: string;
-    area: string;
-    rooms: string;
-    bathrooms: string;
-    price: string;
-    capacity: string;
-    image: string;
-    availability: string;
-    Amenities: string;
-}
+const PropertiesList: React.FC = () => {
+  const [properties, setProperties] = useState<Property[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+  const [searchCity, setSearchCity] = useState<string>('');
+  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-const BASE_URL = 'https://t1w0m0tqlg.execute-api.us-west-2.amazonaws.com/prod/'
+  // Function to fetch properties, optionally filtered by city
+  const fetchProperties = async (city: string = '') => {
+    try {
+      setLoading(true);
+      const url = city
+        ? `https://t1w0m0tqlg.execute-api.us-west-2.amazonaws.com/prod/properties?city=${city}`
+        : `https://t1w0m0tqlg.execute-api.us-west-2.amazonaws.com/prod/properties`;
 
-const PropertiesList: React.FC = () =>
-{
-    const [properties, setProperties] = useState<Property[]>([]);
-    const [loading, setLoading] = useState<boolean>(false);
-    const [error, setError] = useState<string | null>(null);
-    const [cityQuery, setCityQuery] = useState<string>("");
-    const [countryQuery, setCountryQuery] = useState<string>("");
+      const response = await axios.get(url);
+      setProperties(response.data);
+    } catch (err) {
+      setError('Failed to fetch properties. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    const fetchProperties = async () =>
-    {
-        setLoading(true);
-        setError(null);
-        try
-        {
-            const response = await axios.get(
-                `${BASE_URL}properties`,
-                {
-                    params: {
-                        city: cityQuery,
-                        country: countryQuery,
-                    },
-                }
-            );
-            setProperties(response.data);
-        } catch (err)
-        {
-            setError("Failed to fetch properties. Please try again.");
-        } finally
-        {
-            setLoading(false);
-        }
-    };
+  // Handle property click - show modal
+  const handlePropertyClick = (property: Property) => {
+    setSelectedProperty(property);
+    setIsModalOpen(true);
+  };
 
-    return (
-        <div className="marco-cliente">
-            <h1>Property Search</h1>
-            <div style={{ marginBottom: "20px", display: "flex", gap: "10px" }}>
-                <input
-                    type="text"
-                    value={cityQuery}
-                    onChange={(e) => setCityQuery(e.target.value)}
-                    placeholder="Search by city..."
-                    style={{
-                        padding: "10px",
-                        width: "200px",
-                        borderRadius: "5px",
-                        border: "1px solid #ccc",
-                    }}
-                />
-                <input
-                    type="text"
-                    value={countryQuery}
-                    onChange={(e) => setCountryQuery(e.target.value)}
-                    placeholder="Search by country..."
-                    style={{
-                        padding: "10px",
-                        width: "200px",
-                        borderRadius: "5px",
-                        border: "1px solid #ccc",
-                    }}
-                />
-                <button
-                    onClick={fetchProperties}
-                    style={{
-                        padding: "10px 20px",
-                        borderRadius: "5px",
-                        border: "none",
-                        color: "#fff",
-                        cursor: "pointer",
-                    }}
-                >
-                    Search
-                </button>
-            </div>
+  // Handle closing the modal
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProperty(null);
+  };
 
-            {loading && <p>Loading properties...</p>}
-            {error && <p style={{ color: "red" }}>{error}</p>}
+  // Fetch all properties when the component mounts
+  useEffect(() => {
+    fetchProperties();
+  }, []);
 
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                    gap: "20px",
-                }}
-            >
-                {properties.map((property) => (
-                    <div
-                        key={property.id}
-                        style={{
-                            border: "1px solid #ddd",
-                            borderRadius: "10px",
-                            overflow: "hidden",
-                            boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-                        }}
-                    >
-                        <img
-                            src={property.image}
-                            alt={property.property_type}
-                            style={{ width: "100%", height: "200px", objectFit: "cover" }}
-                        />
-                        <div style={{ padding: "10px" }}>
-                            <h3>{property.property_type}</h3>
-                            <p>
-                                <strong>Location:</strong> {property.city}, {property.country}
-                            </p>
-                            <p>
-                                <strong>Price:</strong> {property.price}
-                            </p>
-                            <p>
-                                <strong>Area:</strong> {property.area} sq. ft.
-                            </p>
-                            <p>
-                                <strong>Rooms:</strong> {property.rooms} |{" "}
-                                <strong>Bathrooms:</strong> {property.bathrooms}
-                            </p>
-                            <p>
-                                <strong>Capacity:</strong> {property.capacity} people
-                            </p>
-                            <p>
-                                <strong>Amenities:</strong> {property.Amenities}
-                            </p>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
+  // Handle search submission
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    fetchProperties(searchCity);
+  };
+
+  if (loading) return <div>Loading properties...</div>;
+  if (error) return <div>{error}</div>;
+
+  return (
+    <div>
+      {/* Search Bar */}
+      <form onSubmit={handleSearch} style={styles.searchForm}>
+        <input
+          type="text"
+          placeholder="Search by city..."
+          value={searchCity}
+          onChange={(e) => setSearchCity(e.target.value)}
+          style={styles.searchInput}
+        />
+        <button type="submit" style={styles.searchButton}>
+          Search
+        </button>
+      </form>
+
+      {/* Properties Grid */}
+      <div style={styles.container}>
+        {properties.map((property) => (
+          <div key={property.id} onClick={() => handlePropertyClick(property)}>
+            <PropertyCard property={property} />
+          </div>
+        ))}
+      </div>
+
+      {/* Property Modal */}
+      {isModalOpen && selectedProperty && (
+        <PropertyModal
+          property={selectedProperty}
+          onClose={handleCloseModal}
+        />
+      )}
+    </div>
+  );
+};
+
+// Styling for the component
+const styles: { [key: string]: React.CSSProperties } = {
+  container: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+    gap: '16px',
+    padding: '16px',
+  },
+  searchForm: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: '20px',
+    marginTop: '20px',
+  },
+  searchInput: {
+    padding: '10px',
+    fontSize: '16px',
+    width: '300px',
+    border: '1px solid #ccc',
+    borderRadius: '8px',
+  },
+  searchButton: {
+    marginLeft: '10px',
+    padding: '10px 20px',
+    fontSize: '16px',
+    backgroundColor: '#4caf50',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '8px',
+    cursor: 'pointer',
+  },
 };
 
 export default PropertiesList;
