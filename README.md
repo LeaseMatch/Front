@@ -92,8 +92,38 @@
   </ul>
 </details>
 
-<!-- Features -->
+<!-- Deployment -->
+### FrontEnd Deployment <a name="key-features"></a>
+<table  border="1">
+<thead>
+    <tr>
+      <th colspan="2" style="text-align: center;">AWS Amplify</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><div style="text-align: center"><img src="Deployment images/Amplitude 1.png" alt="logo"  height="auto" /></div>
+</td>
+    <td><div style="text-align: center"><img src="Deployment images/Amplitude 2.png" alt="logo"  height="auto" /></div>
+</td>
+  </tr>
+  </tbody>
+</table>
+<table border="1">
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align: center;">Git Authorization</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><div style="text-align: center"><img src="Deployment images/Git Authorization 1.png" alt="logo"  height="auto" /></div></td>
+      <td><div style="text-align: center"><img src="Deployment images/Git Authorization 2.png" alt="logo"  height="auto" /></div></td>
+    </tr>
+  </tbody>
+</table>
 
+<!-- Features -->
 ### Key Features <a name="key-features"></a>
 
 - **Use of Infrastructure as Code**
