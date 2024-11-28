@@ -169,13 +169,26 @@ Step 1 (CDK Api Services)
 - Open the LeaseMatch project on VS Code and execute the Reopen in Container button [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
 - Set AWS Credentials: https://docs.aws.amazon.com/cli/v1/userguide/cli-configure-envvars.html
 - Move to the location of app.py file (/devops)
-- Run the command: cdk deploy api (api url is generated)
+- Run the command:
+```sh
+ cdk deploy api
+```
+- (api url is generated)
 - Enter to your AWS Account and validate deployed REST services using Postman or other tool 
-
+- After test don´t forget to run the command to destroy infrastructure
+```sh
+  cdk destroy api
+```
 Step 2 (Deploy Amplify Frontend)
 - Update required URLs in src/components folder 
-- Run npm i to construct project dependencies
-- Run npm run dev to validate if app is working
+- Run the command to construct project dependencies
+```sh
+ npm i
+```
+- Run the command to validate if app is working
+```sh
+ npm run dev
+```
 - Commit and Push changes to your repository 
 - Enter to AWS Amplify and click "Deploy App" button
 - Follow the instructions to authorize and select repository and branch
@@ -188,9 +201,16 @@ Step 3 (Execute WAF Stack)
 - Set AWS Credentials: https://docs.aws.amazon.com/cli/v1/userguide/cli-configure-envvars.html
 - update domain name with the URL app generated in previous step
 - Move to the location of app.py file (/devops)
-- Run the command: cdk deploy waf
+- Run the command:
+```sh
+  cdk deploy waf
+```
 - Enter to your AWS Account and validate deployed in AWS Firewall Manager
-- Validate blocked and allowed access 
+- Validate blocked and allowed access
+- After test don´t forget to run the command to destroy infrastructure
+```sh
+  cdk destroy waf
+```
 <!--
 Example commands:
 
