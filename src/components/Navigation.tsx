@@ -17,9 +17,9 @@ const menuOptions: MenuItem[] = [
         ],
     },
     {
-        label: 'Customers',
+        label: 'clients',
         subItems: [
-            { label: 'Registration', path: '/customers/registration' },
+            { label: 'Registration', path: '/clients/registration' },
         ],
     },
 ];

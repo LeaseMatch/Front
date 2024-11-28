@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 interface ClientFormProps { }
 
-const CustomersRegistration: React.FC<ClientFormProps> = () =>
+const ClientsRegistration: React.FC<ClientFormProps> = () =>
 {
     const [formData, setFormData] = useState({
         id: "",
@@ -155,5 +155,5 @@ const CustomersRegistration: React.FC<ClientFormProps> = () =>
     );
 };
 
-export default CustomersRegistration;
+export default ClientsRegistration;
 
