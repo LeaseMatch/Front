@@ -41,25 +41,44 @@
 > LeaseMatch simplifies the rental process by offering a fair, transparent, and flexible marketplace for housing. Whether you're looking to rent an apartment or list your property, LeaseMatch puts the power of choice and negotiation in your hands.
 
 
-**[LeaseMatch]** is a project to show up the concepts learned in the [Bootcamp Arquitectura en la Nube](https://talentotechbogota.co/#bootcamps) of [MinTIC Colombia](https://www.mintic.gov.co/portal/inicio/)
+**[LeaseMatch]** is a project to showcase the concepts learned in the [Bootcamp Arquitectura en la Nube](https://talentotechbogota.co/#bootcamps) of [MinTIC Colombia](https://www.mintic.gov.co/portal/inicio/)
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
+### Architecture <a name="architecture"></a>
 
-> This project is the deployment of the infrastructure required to create a complete website on AWS and following security guidelines and good practices. And it uses of [AWS CDK Infrastructure as a Code]( https://docs.aws.amazon.com/cdk/v2/guide/home.html).
+> This project is the deployment of the infrastructure required to create a complete website on AWS and following security guidelines and good practices. It uses of [AWS CDK Infrastructure as a Code]( https://docs.aws.amazon.com/cdk/v2/guide/home.html).
 
  <div style="text-align: center"><img src="images/architecture.jpg" alt="logo" width=800px height="auto" /></div>
-> Components
+
+### Components <a name="components"></a>
+- **Lambda function**: Used to manage backend logic. The properties_lambda_function property defines the behavior of the function and the path to the code ("./infra/api"). in the code, we assume that you will have a properties.py file inside the api directory, where the logic for managing property data resides.
+
+- **DynamoDB**: This is the NoSQL database used to store property data. The LeaseMatch_table has a primary key id that uniquely identifies each property. The Lambda function has full access to the table, allowing it to perform all database operations (CRUD).
+
+- **API Gateway**: Acts as the entry point to the backend services, routing HTTP requests to the appropriate Lambda functions. It enables secure and scalable communication between clients and the backend, and supports enabling CORS to allow requests from different domains.
+
+- **Amplify (React Vite)**: AWS Amplify integrates the React Vite application with AWS services, simplifying the implementation of backend features like authentication, storage, and API interactions. Amplify also provides seamless hosting and deployment options for the frontend application.
+
+- **Cognito**: Handles user authentication and authorization, providing features such as user registration, login, and secure access to resources. It integrates easily with Amplify and supports standards like OAuth2 and OpenID Connect.
+
+- **CloudFront**: A content delivery network (CDN) service used to distribute and cache the frontend application and other static assets globally, ensuring low latency and high availability for end users.
+
+- **WAF (Web Application Firewall)**: Protects the application from malicious traffic by filtering requests based on custom rules, such as blocking traffic from specific geographic regions or IP addresses.
+
+- **CI/CD**: Continuous Integration and Continuous Deployment pipelines automate the process of building, testing, and deploying the application. This ensures rapid, consistent, and error-free updates to both the frontend and backend services.
+
+### Tech Stack <a name="tech-stack"></a>
+
 <details>
-  <summary>Client</summary>
+  <summary>Frontend</summary>
   <ul>
     <li><div>To deploy the frontend on Amplify, the [AWS Quickstart Deployment Template] was used, following AWS recommendations. This guide helps developers integrate AWS Amplify into a React application, providing step-by-step instructions to set up a React project, install Amplify, configure it to use AWS services (Cognito, Vite React TS,CI/CD, and APIs), and add cloud-powered features like authentication and hosting.</div><a href="https://docs.amplify.aws/react/start/quickstart/">AWS Quickstart Deployment Template V2</a></li>
   </ul>
 </details>
 
 <details>
-  <summary>Server</summary>
+  <summary>Backend</summary>
   <ul><div>To deploy the backend, we used an AWS CDK stack that allows to integrate and deploy the following AWS services: apigateway, lambda, dynamodb (LeaseMatch/devops/infra/api_stack.py)</div>
     <li><a href="https://aws.amazon.com/api-gateway">API Gateway</a></li>
     <li><a href="https://aws.amazon.com/lambda">Lambda Function</a></li>
@@ -211,11 +230,10 @@ Example:
 - GitHub: [@NeckerFree](https://github.com/NeckerFree)
 - LinkedIn: [Elio Cortés](https://www.linkedin.com/in/elionelsoncortes/)
 
-👤 **Author2**
+👤 **Alexandra Baquero**
+- GitHub: [@alexabaqueroc](https://github.com/alexabaqueroc)
+- LinkedIn: [LinkedIn](linkedin.com/in/alexa-baquero-a06a60191)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 👤 **Author3**
 
