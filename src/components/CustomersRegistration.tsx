@@ -68,10 +68,10 @@ const CustomersRegistration: React.FC<ClientFormProps> = () =>
     };
 
     return (
-        <div>
+        <div className="marco-cliente">
             <h2>Create Client</h2>
             {status && <p>{status}</p>}
-            <form onSubmit={handleSubmit}>
+            <form className="form" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="id">ID:</label>
                     <input

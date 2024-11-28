@@ -13,16 +13,19 @@ const App: React.FC = () =>
   return (
     <Router>
       <div className='frame'>
-        <div className='frame-header'>
-          <h1>User: {user?.signInDetails?.loginId} </h1><button className='button-out' onClick={signOut}>Sign out</button>
-        </div>
+
         <div className='contenedor'>
           <Navigation />
-          <Routes>
-            <Route path="/properties/registration" element={<PropertiesRegistration />} />
-            <Route path="/properties/search" element={<PropertiesList />} />
-            <Route path="/customers/registration" element={<CustomersRegistration />} />
-          </Routes>
+          <div className='marco-pagina'>
+            <div className='header-user'>
+              <h3>User: {user?.signInDetails?.loginId} </h3><button className='button-out' onClick={signOut}>Sign out</button>
+            </div>
+            <Routes>
+              <Route path="/properties/registration" element={<PropertiesRegistration />} />
+              <Route path="/properties/search" element={<PropertiesList />} />
+              <Route path="/customers/registration" element={<CustomersRegistration />} />
+            </Routes>
+          </div>
         </div>
       </div>
     </Router >
