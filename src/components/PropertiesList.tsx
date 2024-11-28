@@ -17,6 +17,8 @@ interface Property
     Amenities: string;
 }
 
+const BASE_URL = 'https://t1w0m0tqlg.execute-api.us-west-2.amazonaws.com/prod/'
+
 const PropertiesList: React.FC = () =>
 {
     const [properties, setProperties] = useState<Property[]>([]);
@@ -32,7 +34,7 @@ const PropertiesList: React.FC = () =>
         try
         {
             const response = await axios.get(
-                `https://pojsy7td41.execute-api.us-west-2.amazonaws.com/prod/properties`,
+                `${BASE_URL}properties`,
                 {
                     params: {
                         city: cityQuery,

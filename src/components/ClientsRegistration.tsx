@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 interface ClientFormProps { }
 
+const BASE_URL = 'https://t1w0m0tqlg.execute-api.us-west-2.amazonaws.com/prod/'
+
 const ClientsRegistration: React.FC<ClientFormProps> = () =>
 {
     const [formData, setFormData] = useState({
@@ -30,7 +32,7 @@ const ClientsRegistration: React.FC<ClientFormProps> = () =>
         e.preventDefault();
         try
         {
-            const response = await fetch("https://pojsy7td41.execute-api.us-west-2.amazonaws.com/prod/clients", {
+            const response = await fetch(`${BASE_URL}clients`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
