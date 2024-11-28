@@ -93,7 +93,7 @@
 </details>
 
 <!-- Deployment -->
-### FrontEnd Deployment <a name="key-features"></a>
+### Frontend Deployment <a name="key-features"></a>
 <table  border="1">
 <thead>
     <tr>
@@ -122,6 +122,23 @@
     </tr>
   </tbody>
 </table>
+<table border="1">
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align: center;">App deploy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><div style="text-align: center"><img src="Deployment images/Website Deploy 1.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="Deployment images/Website Deploy 2.png"  height="auto" /></td>
+    </tr>
+     <tr>
+      <td><div style="text-align: center"><img src="Deployment images/Website Deploy 3.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="Deployment images/Website Deploy 4.png"  height="auto" /></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- Features -->
 ### Key Features <a name="key-features"></a>
@@ -147,10 +164,15 @@
 
 To get a local copy up and running, follow these steps.
 Step 1 (Backend) 
-- Clone the repository using: git clone https://github.com/LeaseMatch/LeaseMatch.git
-
+- Clone the repository using: 
+```
+git clone https://github.com/LeaseMatch/LeaseMatch.git
+```
 Step 2 (Frontend)
-- Clone the repository https://github.com/LeaseMatch/Front in your GitHub Account
+- Clone the Front repository in your Github account:
+```
+git clone https://github.com/LeaseMatch/Front.git
+```
 ### Prerequisites
 
 In order to run this project you need:
@@ -163,7 +185,7 @@ Example command:
 ```
  -->
 
-### Setup
+### Setup, Install & Deployment
 
 Step 1 (CDK Api Services) 
 - Open the LeaseMatch project on VS Code and execute the Reopen in Container button [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
@@ -211,63 +233,29 @@ Step 3 (Execute WAF Stack)
 ```sh
   cdk destroy waf
 ```
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
-
-### Install
-
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
 
 ### Usage
+- You can test backend services using Postman 
+- To execute the app use the Amplify deployed 
+- To restrict access you can include IP address or Country code 
 
-To run the project, execute the following command:
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
+<table border="1">
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align: center;">Lease Match App</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><div style="text-align: center"><img src="Deployment images/Front 1.jpg"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="Deployment images/Front 2.jpg"  height="auto" /></td>
+    </tr>
+    <tr>
+      <td><div style="text-align: center"><img src="Deployment images/Front 3.jpg"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="Deployment images/Front 4.jpg"  height="auto" /></td>
+    </tr>
+  </tbody>
+</table>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -317,9 +305,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[Configure AWS environment vars]**
+- [ ] **[Create complete CRUD opertions]**
+- [ ] **[Create the complete deployment using CDK]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
