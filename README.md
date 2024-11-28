@@ -36,12 +36,12 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [LeaseMatch] <a name="about-project"></a>
+# 📖 LeaseMatch <a name="about-project"></a>
 
 > LeaseMatch simplifies the rental process by offering a fair, transparent, and flexible marketplace for housing. Whether you're looking to rent an apartment or list your property, LeaseMatch puts the power of choice and negotiation in your hands.
 
 
-**[LeaseMatch]** is a project to showcase the concepts learned in the [Bootcamp Arquitectura en la Nube](https://talentotechbogota.co/#bootcamps) of [MinTIC Colombia](https://www.mintic.gov.co/portal/inicio/)
+**LeaseMatch** is a project to showcase the concepts learned in the [Bootcamp Arquitectura en la Nube](https://talentotechbogota.co/#bootcamps) of [MinTIC Colombia](https://www.mintic.gov.co/portal/inicio/)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -51,7 +51,7 @@
 
  <div style="text-align: center"><img src="images/architecture.jpg" alt="logo" width=800px height="auto" /></div>
 
-### Components <a name="components"></a>
+> **Components** <a name="components"></a>
 - **Lambda function**: Used to manage backend logic. The properties_lambda_function property defines the behavior of the function and the path to the code ("./infra/api"). in the code, we assume that you will have a properties.py file inside the api directory, where the logic for managing property data resides.
 
 - **DynamoDB**: This is the NoSQL database used to store property data. The LeaseMatch_table has a primary key id that uniquely identifies each property. The Lambda function has full access to the table, allowing it to perform all database operations (CRUD).
