@@ -88,7 +88,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://development.d3u15bor4oundq.amplifyapp.com)
+- [Live Demo Link](https://development.1234567890qwertyuio.amplifyapp.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
