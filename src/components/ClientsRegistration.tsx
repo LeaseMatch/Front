@@ -30,7 +30,7 @@ const ClientsRegistration: React.FC<ClientFormProps> = () =>
         e.preventDefault();
         try
         {
-            const response = await fetch("https://12mo5zkgvg.execute-api.us-west-2.amazonaws.com/prod/clients", {
+            const response = await fetch("https://pojsy7td41.execute-api.us-west-2.amazonaws.com/prod/clients", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

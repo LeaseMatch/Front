@@ -32,7 +32,7 @@ const PropertiesList: React.FC = () =>
         try
         {
             const response = await axios.get(
-                `https://12mo5zkgvg.execute-api.us-west-2.amazonaws.com/prod/properties`,
+                `https://pojsy7td41.execute-api.us-west-2.amazonaws.com/prod/properties`,
                 {
                     params: {
                         city: cityQuery,
