@@ -11,9 +11,15 @@ interface ClientData {
   email: string;
   telephone: string;
 }
+interface ExtendedAuthUser {
+  attributes?: {
+    sub?: string;
+    [key: string]: any; // Other potential attributes
+  };
+}
 
 const ProfilePage: React.FC = () => {
-  const { user } = useAuthenticator((context) => [context.user]);
+  const { user } = useAuthenticator((context) => [context.user]) as { user: ExtendedAuthUser };
   const [formData, setFormData] = useState<ClientData>({
     id: '',
     country: '',
