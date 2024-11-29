@@ -14,7 +14,6 @@ interface ClientData {
 
 const ProfilePage: React.FC = () => {
   const { user } = useAuthenticator((context) => [context.user]);
-  const [_ , setClientData] = useState<ClientData | null>(null);
   const [formData, setFormData] = useState<ClientData>({
     id: '',
     country: '',
@@ -24,8 +23,6 @@ const ProfilePage: React.FC = () => {
     email: '',
     telephone: ''
   });
-  const [_, setLoading] = useState<boolean>(true);
-  const [_, setError] = useState<string | null>(null);
 
   // Fetch client data from the API
   const fetchClientData = async () => {
@@ -33,12 +30,12 @@ const ProfilePage: React.FC = () => {
       const response = await axios.get(
         'https://t1w0m0tqlg.execute-api.us-west-2.amazonaws.com/prod/clients?userId=44f8a418-20f1-70f0-d183-f1e0196eab1e'
       );
-      setClientData(response.data);
+
       setFormData(response.data); // Populate form with fetched data
     } catch (err) {
-      setError('Failed to fetch client data. Please try again.');
+      console.log('Failed to fetch client data. Please try again.');
     } finally {
-      setLoading(false);
+      console.log(false);
     }
   };
 
@@ -55,7 +52,7 @@ const ProfilePage: React.FC = () => {
       );
       alert('Data successfully updated');
     } catch (err) {
-      setError('Failed to update the data. Please try again.');
+      console.log('Failed to update the data. Please try again.');
     }
   };
 

@@ -8,51 +8,26 @@ type PropertyModalProps = {
 };
 
 const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose }) => {
-  const [_, setOffers] = useState<any[]>([]);
-  const [_, setLoading] = useState<boolean>(true);
-  const [_, setError] = useState<string | null>(null);
   const [offerDetails, setOfferDetails] = useState<string>('');
-  const [submittingOffer, setSubmittingOffer] = useState<boolean>(false);
-  const [offerError, setOfferError] = useState<string | null>(null);
 
   // Fetch offers for the selected property when modal is opened
   useEffect(() => {
     const fetchOffers = async () => {
       try {
-        setLoading(true);
+
         const response = await axios.get(
           `https://t1w0m0tqlg.execute-api.us-west-2.amazonaws.com/prod/properties/${property.id}/offers`
         );
-        setOffers(response.data);
+        console.log(response.data);
       } catch (err) {
-        setError('Failed to fetch offers. Please try again.');
+        console.log('Failed to fetch offers. Please try again.');
       } finally {
-        setLoading(false);
+        console.log(false);
       }
     };
 
     fetchOffers();
   }, [property.id]);
-
-  // Handle creating a new offer
-  const handleCreateOffer = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      setSubmittingOffer(true);
-      const response = await axios.post(
-        `https://t1w0m0tqlg.execute-api.us-west-2.amazonaws.com/prod/properties/${property.id}/offers`,
-        { details: offerDetails }
-      );
-      setOffers((prevOffers) => [...prevOffers, response.data]);
-      setOfferDetails('');
-      setOfferError(null);
-    } catch (err) {
-      setOfferError('Offer Created Succesfully');
-    } finally {
-      setSubmittingOffer(false);
-      onClose()
-    }
-  };
 
   return (
     <div className="modal-overlay" style={styles.modalOverlay}>
