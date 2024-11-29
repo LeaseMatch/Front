@@ -23,7 +23,6 @@
   - [Prerequisites](#prerequisites)
   - [Setup, Install & Deployment](#setup-install-deploy)
   - [Usage](#usage)
-  - 
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
