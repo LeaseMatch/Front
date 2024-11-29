@@ -21,11 +21,9 @@
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Install](#install)
+  - [Setup, Install & Deployment](#setup-install-deploy)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
+  - 
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -102,9 +100,9 @@
   </thead>
   <tbody>
   <tr>
-    <td><div style="text-align: center"><img src="Deployment images/Amplify 1.png" alt="logo"  height="auto" /></div>
+    <td><div style="text-align: center"><img src="images/Amplify 1.png" alt="logo"  height="auto" /></div>
 </td>
-    <td><div style="text-align: center"><img src="Deployment images/Amplify 2.png" alt="logo"  height="auto" /></div>
+    <td><div style="text-align: center"><img src="images/Amplify 2.png" alt="logo"  height="auto" /></div>
 </td>
   </tr>
   </tbody>
@@ -117,8 +115,8 @@
   </thead>
   <tbody>
     <tr>
-      <td><div style="text-align: center"><img src="Deployment images/Git Authorization 1.png" alt="logo"  height="auto" /></div></td>
-      <td><div style="text-align: center"><img src="Deployment images/Git Authorization 2.png" alt="logo"  height="auto" /></div></td>
+      <td><div style="text-align: center"><img src="images/Git Authorization 1.png" alt="logo"  height="auto" /></div></td>
+      <td><div style="text-align: center"><img src="images/Git Authorization 2.png" alt="logo"  height="auto" /></div></td>
     </tr>
   </tbody>
 </table>
@@ -130,12 +128,12 @@
   </thead>
   <tbody>
     <tr>
-      <td><div style="text-align: center"><img src="Deployment images/Website Deploy 1.png"  height="auto" /></td>
-      <td><div style="text-align: center"><img src="Deployment images/Website Deploy 2.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/Website Deploy 1.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/Website Deploy 2.png"  height="auto" /></td>
     </tr>
      <tr>
-      <td><div style="text-align: center"><img src="Deployment images/Website Deploy 3.png"  height="auto" /></td>
-      <td><div style="text-align: center"><img src="Deployment images/Website Deploy 4.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/Website Deploy 3.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/Website Deploy 4.png"  height="auto" /></td>
     </tr>
   </tbody>
 </table>
@@ -147,12 +145,12 @@
   </thead>
   <tbody>
     <tr>
-      <td><div style="text-align: center"><img src="Deployment images/api gateway.png"  height="auto" /></td>
-      <td><div style="text-align: center"><img src="Deployment images/created lambdas.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/api gateway.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/created lambdas.png"  height="auto" /></td>
     </tr>
     <tr>
-      <td><div style="text-align: center"><img src="Deployment images/lambda properties.png"  height="auto" /></td>
-      <td><div style="text-align: center"><img src="Deployment images/labbda clients.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/lambda properties.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/labbda clients.png"  height="auto" /></td>
     </tr>
   </tbody>
 </table>
@@ -164,9 +162,9 @@
   </thead>
   <tbody>
     <tr>
-      <td><div style="text-align: center"><img src="Deployment images/dynamo tables.png"  height="auto" /></td>
-      <td><div style="text-align: center"><img src="Deployment images/dynamo properties.png"  height="auto" /></td>
-       <td><div style="text-align: center"><img src="Deployment images/dynamo clients.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/dynamo tables.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/dynamo properties.png"  height="auto" /></td>
+       <td><div style="text-align: center"><img src="images/dynamo clients.png"  height="auto" /></td>
     </tr>
   </tbody>
 </table>
@@ -178,9 +176,9 @@
   </thead>
   <tbody>
     <tr>
-     <td><div style="text-align: center"><img src="Deployment images/cloudformation api stack.png"  height="auto" /></td>
-      <td><div style="text-align: center"><img src="Deployment images/Cloudformation stacks.png"  height="auto" /></td>
-       <td><div style="text-align: center"><img src="Deployment images/Cloudfront restriction 1.png"  height="auto" /></td>
+     <td><div style="text-align: center"><img src="images/cloudformation api stack.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/Cloudformation stacks.png"  height="auto" /></td>
+       <td><div style="text-align: center"><img src="images/Cloudfront restriction 1.png"  height="auto" /></td>
     </tr>
   </tbody>
 </table>
@@ -192,8 +190,8 @@
   </thead>
   <tbody>
     <tr>
-     <td><div style="text-align: center"><img src="Deployment images/Cognito.png"  height="auto" /></td>
-      <td><div style="text-align: center"><img src="Deployment images/Cognito users.png"  height="auto" /></td>
+     <td><div style="text-align: center"><img src="images/Cognito.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/Cognito users.png"  height="auto" /></td>
     </tr>
   </tbody>
 </table>
@@ -206,12 +204,12 @@
   </thead>
   <tbody>
     <tr>
-     <td><div style="text-align: center"><img src="Deployment images/waf 1.png"  height="auto" /></td>
-      <td><div style="text-align: center"><img src="Deployment images/blocked vs allowed 1.png"  height="auto" /></td>
+     <td><div style="text-align: center"><img src="images/waf 1.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/blocked vs allowed 1.png"  height="auto" /></td>
     </tr>
     <tr>
-     <td><div style="text-align: center"><img src="Deployment images/blocked vs allowed 2.png"  height="auto" /></td>
-      <td><div style="text-align: center"><img src="Deployment images/blocked vs allowed 3.png"  height="auto" /></td>
+     <td><div style="text-align: center"><img src="images/blocked vs allowed 2.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/blocked vs allowed 3.png"  height="auto" /></td>
     </tr>
   </tbody>
 </table>
@@ -252,15 +250,11 @@ git clone https://github.com/LeaseMatch/Front.git
 
 In order to run this project you need:
 
-<!--
-Example command:
+- AWS Account 
+- Docker
+- Visual Studio
 
-```sh
- gem install rails
-```
- -->
-
-### Setup, Install & Deployment
+### Setup, Install & Deployment <a name="setup-install-deploy"></a>
 
 Step 1 (CDK Api Services) 
 - Open the LeaseMatch project on VS Code and execute the Reopen in Container button [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
@@ -322,12 +316,12 @@ Step 3 (Execute WAF Stack)
   </thead>
   <tbody>
     <tr>
-      <td><div style="text-align: center"><img src="Deployment images/Front 1.jpg"  height="auto" /></td>
-      <td><div style="text-align: center"><img src="Deployment images/Front 2.jpg"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/Front 1.jpg"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/Front 2.jpg"  height="auto" /></td>
     </tr>
     <tr>
-      <td><div style="text-align: center"><img src="Deployment images/Front 3.jpg"  height="auto" /></td>
-      <td><div style="text-align: center"><img src="Deployment images/Front 4.jpg"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/Front 3.jpg"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="images/Front 4.jpg"  height="auto" /></td>
     </tr>
   </tbody>
 </table>
@@ -346,31 +340,6 @@ Step 3 (Execute WAF Stack)
 👤 **Alexandra Baquero**
 - GitHub: [@alexabaqueroc](https://github.com/alexabaqueroc)
 - LinkedIn: [LinkedIn](linkedin.com/in/alexa-baquero-a06a60191)
-
-
-👤 **Author3**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author4**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author5**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author6**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -400,9 +369,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project please give us a star
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -410,9 +377,7 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+We would like to thank our intructor [Nicolás](https://github.com/nicolasli1)  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -422,13 +387,13 @@ I would like to thank...
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- **How to install devcontainers in a CDK project**
 
-  - [Answer_1]
+  - Installing Dev Containers (devcontainers) in a CDK (AWS Cloud Development Kit) project involves setting up a development environment using Visual Studio Code's Dev Containers extension. This provides a containerized environment tailored for your project.
 
-- **[Question_2]**
+- **How to create Amplify Reac App**
 
-  - [Answer_2]
+  - Follow the instructions in the [Quickstar Guide](https://docs.amplify.aws/react/start/quickstart)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
