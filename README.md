@@ -47,7 +47,7 @@
 
 > This project is the deployment of the infrastructure required to create a complete website on AWS and following security guidelines and good practices. It uses of [AWS CDK Infrastructure as a Code]( https://docs.aws.amazon.com/cdk/v2/guide/home.html).
 
- <div style="text-align: center"><img src="images/architecture.jpg" alt="logo" width=800px height="auto" /></div>
+ <div style="text-align: center"><img src="images/architecture.jpg" alt="logo" height="auto" /></div>
 
 > **Components** <a name="components"></a>
 - **Lambda function**: Used to manage backend logic. The properties_lambda_function property defines the behavior of the function and the path to the code ("./infra/api"). in the code, we assume that you will have a properties.py file inside the api directory, where the logic for managing property data resides.
@@ -87,6 +87,13 @@
 <summary>Database</summary>
   <ul>
      <li><a href="https://aws.amazon.com/dynamodb">Dynamo DB</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Firewall</summary>
+  <ul><div>AWS WAF is used to protect the CloudFront distribution and source servers. </div>
+     <li><a href="https://aws.amazon.com/waf">AWS WAF</a></li>
   </ul>
 </details>
 
@@ -377,7 +384,7 @@ If you like this project please give us a star
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank our intructor [Nicolás](https://github.com/nicolasli1)  
+We would like to thank our instructor [Nicolas](https://github.com/nicolasli1)  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
