@@ -14,7 +14,7 @@ interface ClientData {
 
 const ProfilePage: React.FC = () => {
   const { user } = useAuthenticator((context) => [context.user]);
-  const [clientData, setClientData] = useState<ClientData | null>(null);
+  const [_ , setClientData] = useState<ClientData | null>(null);
   const [formData, setFormData] = useState<ClientData>({
     id: '',
     country: '',
@@ -24,8 +24,8 @@ const ProfilePage: React.FC = () => {
     email: '',
     telephone: ''
   });
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+  const [_, setLoading] = useState<boolean>(true);
+  const [_, setError] = useState<string | null>(null);
 
   // Fetch client data from the API
   const fetchClientData = async () => {

@@ -8,9 +8,9 @@ type PropertyModalProps = {
 };
 
 const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose }) => {
-  const [offers, setOffers] = useState<any[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+  const [_, setOffers] = useState<any[]>([]);
+  const [_, setLoading] = useState<boolean>(true);
+  const [_, setError] = useState<string | null>(null);
   const [offerDetails, setOfferDetails] = useState<string>('');
   const [submittingOffer, setSubmittingOffer] = useState<boolean>(false);
   const [offerError, setOfferError] = useState<string | null>(null);
