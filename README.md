@@ -102,9 +102,9 @@
   </thead>
   <tbody>
   <tr>
-    <td><div style="text-align: center"><img src="Deployment images/Amplitude 1.png" alt="logo"  height="auto" /></div>
+    <td><div style="text-align: center"><img src="Deployment images/Amplify 1.png" alt="logo"  height="auto" /></div>
 </td>
-    <td><div style="text-align: center"><img src="Deployment images/Amplitude 2.png" alt="logo"  height="auto" /></div>
+    <td><div style="text-align: center"><img src="Deployment images/Amplify 2.png" alt="logo"  height="auto" /></div>
 </td>
   </tr>
   </tbody>
@@ -139,7 +139,82 @@
     </tr>
   </tbody>
 </table>
+<table border="1">
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align: center;">Api Gateway & Lambdas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><div style="text-align: center"><img src="Deployment images/api gateway.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="Deployment images/created lambdas.png"  height="auto" /></td>
+    </tr>
+    <tr>
+      <td><div style="text-align: center"><img src="Deployment images/lambda properties.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="Deployment images/labbda clients.png"  height="auto" /></td>
+    </tr>
+  </tbody>
+</table>
+<table border="1">
+  <thead>
+    <tr>
+      <th colspan="3" style="text-align: center;">Dynamo DB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><div style="text-align: center"><img src="Deployment images/dynamo tables.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="Deployment images/dynamo properties.png"  height="auto" /></td>
+       <td><div style="text-align: center"><img src="Deployment images/dynamo clients.png"  height="auto" /></td>
+    </tr>
+  </tbody>
+</table>
+<table border="1">
+  <thead>
+    <tr>
+      <th colspan="3" style="text-align: center;">Cloud formation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     <td><div style="text-align: center"><img src="Deployment images/cloudformation api stack.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="Deployment images/Cloudformation stacks.png"  height="auto" /></td>
+       <td><div style="text-align: center"><img src="Deployment images/Cloudfront restriction 1.png"  height="auto" /></td>
+    </tr>
+  </tbody>
+</table>
+<table border="1">
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align: center;">Cognito</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     <td><div style="text-align: center"><img src="Deployment images/Cognito.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="Deployment images/Cognito users.png"  height="auto" /></td>
+    </tr>
+  </tbody>
+</table>
 
+<table border="1">
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align: center;">WAF blocked and allowed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     <td><div style="text-align: center"><img src="Deployment images/waf 1.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="Deployment images/blocked vs allowed 1.png"  height="auto" /></td>
+    </tr>
+    <tr>
+     <td><div style="text-align: center"><img src="Deployment images/blocked vs allowed 2.png"  height="auto" /></td>
+      <td><div style="text-align: center"><img src="Deployment images/blocked vs allowed 3.png"  height="auto" /></td>
+    </tr>
+  </tbody>
+</table>
 <!-- Features -->
 ### Key Features <a name="key-features"></a>
 
