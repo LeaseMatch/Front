@@ -348,6 +348,14 @@ Step 3 (Execute WAF Stack)
 - GitHub: [@alexabaqueroc](https://github.com/alexabaqueroc)
 - LinkedIn: [LinkedIn](linkedin.com/in/alexa-baquero-a06a60191)
 
+👤 **Ferney Medina**
+
+👤 **Juan Marciglia**
+
+👤 **Andrés**
+
+👤 **Kevin**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
