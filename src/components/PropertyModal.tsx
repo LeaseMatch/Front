@@ -9,6 +9,8 @@ type PropertyModalProps = {
 
 const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose }) => {
   const [offerDetails, setOfferDetails] = useState<string>('');
+  const [submittingOffer, setSubmittingOffer] = useState<boolean>(false);
+  const [offerError, setOfferError] = useState<string | null>(null);
 
   // Fetch offers for the selected property when modal is opened
   useEffect(() => {
@@ -28,6 +30,25 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose }) => {
 
     fetchOffers();
   }, [property.id]);
+
+  // Handle creating a new offer
+  const handleCreateOffer = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      setSubmittingOffer(true);
+      await axios.post(
+        `https://t1w0m0tqlg.execute-api.us-west-2.amazonaws.com/prod/properties/${property.id}/offers`,
+        { details: offerDetails }
+      );
+      setOfferDetails('');
+      setOfferError(null);
+    } catch (err) {
+      setOfferError('Offer Created Succesfully');
+    } finally {
+      setSubmittingOffer(false);
+      onClose()
+    }
+  };
 
   return (
     <div className="modal-overlay" style={styles.modalOverlay}>
